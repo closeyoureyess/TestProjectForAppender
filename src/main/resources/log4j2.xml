@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Appenders>
+        <!-- Твой кастомный аппендер -->
+        <EffectiveAppender  name="EffectiveAppender" topic="app-logs" bootstrapServers="localhost:9092">
+            <PatternLayout pattern="%d %p %c [%t] %m%n"/>
+        </EffectiveAppender >
+    </Appenders>
+
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="EffectiveAppender"/>
+        </Root>
+    </Loggers>
+</Configuration>
